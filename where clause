@@ -1,0 +1,30 @@
+The WHERE clause is used to filter records at the time of SELECT.
+
+Conditional where clause specifies selection criteria, to select required records from a database table.
+
+
+SELECT [*] FROM [TableName] WHERE [condition1] [AND [OR]] [condition2]...
+WHERE clause can be used to apply various comma separated condition, in one or more tables.
+Using the WHERE clause to select the specified condition.
+Specific conditions using AND or OR operators.
+A WHERE clause can be used with DELETE or UPDATE.
+
+<?php
+// Create connection
+    $con=mysqli_connect("example.com","alex","qwerty","db_name");
+    
+// Check connection
+if (mysqli_connect_errno($con)) {
+    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
+
+$query=mysqli_query($con, "SELECT * FROM contact WHERE name='alex' ");
+while($data = mysqli_fetch_array($query)){
+    echo $data["name"]."<br>";
+}
+?>
+report this ad
+ 
+
+© 2009 — 2022 W3schools® of Technology.
+About UsContact UsCopyrightPrivacy Policy
