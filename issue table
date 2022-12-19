@@ -1,0 +1,8 @@
+-- Creating issue table
+create table issue (
+  member_id int primary key,
+  member_name varchar(25),
+  book_name varchar(25),
+  date_issue date,
+  date_return date
+);
