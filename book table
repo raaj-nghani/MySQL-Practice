@@ -1,0 +1,8 @@
+- Creating book table
+create table book (
+  id int primary key,
+  book_name varchar(25),
+  category varchar(15),
+  author varchar(25),
+  publisher varchar(25),
+);
