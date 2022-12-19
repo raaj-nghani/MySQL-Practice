@@ -3,3 +3,11 @@ create table admin (
 cust_id varchar(25),
 password varchar(25)
 );
+
+
+
+
+-- Inserting values
+insert into admin values
+("admin1","1234"),
+("admin2","9876");
