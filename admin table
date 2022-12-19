@@ -1,0 +1,5 @@
+-- Create admin table
+create table admin (
+cust_id varchar(25),
+password varchar(25)
+);
