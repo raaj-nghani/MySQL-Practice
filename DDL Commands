@@ -1,0 +1,39 @@
+create database hr1; # createing a database hr1
+use hr1; # connecting with hr1 database
+create table employees(empid integer, emp_name varchar(20), doj date); # creating a employee tables with empid name and doj fields
+insert into employees values (100,'sam','2022-10-22'); # inserting some value to the employee table
+insert into employees values (101,'Ram','2022-11-01'),
+(102,'Mojan','2020-01-22'),(103,'Sonu','2022-10-22'),
+(103,'Manish','2021-02-10'),(104,'Kunal','2019-12-10');
+select * from employees;
+/*
+DDL (Data Definition Language)
+CREATE - Creating table
+ALTER
+	add
+    modify
+    rename column
+    drop column
+RENAME table
+*/
+
+
+
+alter table employees add salary integer;
+alter table employees add(phone_no int, email varchar(30));
+alter table employees modify phone_no varchar(10);
+alter table employees modify phone_no int;
+alter table employees modify phone_no varchar(30),modify email int;
+alter table employees modify phone_no int,modify email varchar(3);
+alter table employees rename column empid to id;
+alter table employees rename column id to empid;
+
+alter table employees drop column email;
+select distinct(e1.emp_name) from employees e1 join employees e2 on e1.empid = e2.empid;
+rename table employees to emp_info;
+show tables;
+rename table emp_info to employees;
+alter table employees rename emp_info;
+create table emp_info select * from employees;
+drop table emp_info;
+describe employees;
